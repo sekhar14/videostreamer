@@ -1,0 +1,17 @@
+h1 {
+  text-align: center
+}
+
+img {
+  width : "204";
+  height: "136";
+  margin: 50px 50px 50px 50px;
+}
+
+.jumbotron {
+  background-color: lightblue;
+}
+
+video {
+  margin-left : 25%;
+}
