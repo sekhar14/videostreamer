@@ -8,7 +8,7 @@ router.use((req, res, next) => {
     next()
 })
 
-router.get('/:videoname', (req, res) => {
+router.get('/:videoname', (req, res, next) => {
     const {videoname} = req.params
     const videoFile = path.join(__dirname, `../videos/${videoname}.mp4`)
     fs.stat(videoFile, (err, stats) => {
@@ -33,6 +33,7 @@ router.get('/:videoname', (req, res) => {
             stream.on('error', (err) => res.send(err))
         }
     })
+    next()
 })
 
 module.exports = router
